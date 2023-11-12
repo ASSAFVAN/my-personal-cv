@@ -7,9 +7,10 @@ import { ContactMeModule } from './pages/contact-me/contact-me.module';
 import { FormalEducationModule } from './pages/formal-education/formal-education.module';
 import { HomepageModule } from './pages/homepage/homepage.module';
 import { PracticalExperienceModule } from './pages/practical-experience/practical-experience.module';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

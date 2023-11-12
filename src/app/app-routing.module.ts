@@ -8,7 +8,7 @@ import { PracticalExperienceComponent } from './pages/practical-experience/pract
 const routes: Routes = [
   { path: '', component: HomepageComponent },
   { path: 'formal-education', component: FormalEducationComponent },
-  { path: 'parctical-experience', component: PracticalExperienceComponent },
+  { path: 'practical-experience', component: PracticalExperienceComponent },
   { path: 'contact-me', component: ContactMeComponent },
   // { path: '**', component: PageNotFoundComponent },
 ];

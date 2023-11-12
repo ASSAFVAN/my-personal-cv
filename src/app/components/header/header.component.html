@@ -1,0 +1,28 @@
+<header>
+  <nav>
+    <div class="flex">
+      <div class="logo" routerLink="/">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/8/8a/Icon-doc.svg"
+          alt="logo"
+        />
+        <div class="title-container">
+          <p class="title">PERSONAL CV</p>
+          <p class="name">Assaf Vanunu</p>
+        </div>
+      </div>
+      <div class="menu-toggle" (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="links" [ngClass]="{ show: isMenuOpen }">
+      <a class="link" routerLink="/formal-education">Formal Education</a>
+      <a class="link" routerLink="/practical-experience"
+        >Practical Experience</a
+      >
+      <a class="link" routerLink="/contact-me">Contact Me</a>
+    </div>
+  </nav>
+</header>
