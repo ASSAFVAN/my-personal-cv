@@ -61,7 +61,7 @@ nav {
   }
   .links a {
     text-decoration: none;
-    color: black;
+    color: var(--secondary-color);
 
     &:hover {
       color: var(--primary-color);
@@ -84,7 +84,7 @@ nav {
       flex-direction: column;
       text-align: center;
       width: 100%;
-      background-color: #333;
+      background-color: var(--secondary-color);
       top: 70px;
       left: 0;
     }
