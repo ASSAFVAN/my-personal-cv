@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactMeComponent } from './contact-me/contact-me.component';
-import { FormalEducationComponent } from './formal-education/formal-education.component';
+import { ContactMeComponent } from './pages/contact-me/contact-me.component';
+import { FormalEducationComponent } from './pages/formal-education/formal-education.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
-import { PracticalExperienceComponent } from './practical-experience/practical-experience.component';
+import { PracticalExperienceComponent } from './pages/practical-experience/practical-experience.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
