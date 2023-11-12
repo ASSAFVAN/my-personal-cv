@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-header',
@@ -6,9 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  isMenuOpen = false;
+  constructor(public menuService: MenuService) {}
+
   toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
-    console.log(this.isMenuOpen, 'ismenuopen');
+    this.menuService.toggleMenu();
   }
 }
