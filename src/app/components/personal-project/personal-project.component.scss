@@ -1,0 +1,23 @@
+.project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: inherit;
+  gap: 20px;
+
+  .demo {
+    text-decoration: none;
+    color: var(--secondary-color);
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+img {
+  height: 100px;
+  width: 100px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  text-align: center;
+}

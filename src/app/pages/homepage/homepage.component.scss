@@ -45,6 +45,13 @@ section {
   animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
+.profile-image {
+  clip-path: circle();
+}
+img {
+  transform: rotateX(45deg);
+}
+
 @keyframes typing {
   from {
     width: 0;

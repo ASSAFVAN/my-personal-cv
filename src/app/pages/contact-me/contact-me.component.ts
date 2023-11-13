@@ -19,6 +19,12 @@ export class ContactMeComponent implements OnInit {
     phone: ['', [Validators.required, Validators.pattern('^\\+?[0-9]{1,20}$')]],
   });
 
+  ngOnInit(): void {
+    this.submitService.isFormSubmitted$.subscribe((data: boolean) => {
+      this.isFormSubmitted = data;
+    });
+  }
+
   isFieldInvalid(controlName: string): boolean {
     const control = this.contactForm.get(controlName);
     return (
@@ -36,9 +42,7 @@ export class ContactMeComponent implements OnInit {
     }
   }
 
-  ngOnInit(): void {
-    this.submitService.isFormSubmitted$.subscribe((data: boolean) => {
-      this.isFormSubmitted = data;
-    });
+  ngOnDestroy() {
+    this.submitService.onFormSubmit(false);
   }
 }

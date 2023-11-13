@@ -1,1 +1,106 @@
-<p>practical-experience works!</p>
+<section>
+  <h1>Experience</h1>
+  <div class="experience-container">
+    <div class="tabs">
+      <p (click)="toggleContent()" [ngClass]="{ 'tab-highlight': showContent }">
+        Work Experience
+      </p>
+      <div class="vertical-line"></div>
+      <p
+        (click)="toggleContent()"
+        [ngClass]="{ 'tab-highlight': !showContent }"
+      >
+        Personal Projects
+      </p>
+    </div>
+    <div *ngIf="showContent">
+      <ul>
+        <li class="company">
+          <h3 class="company-name">
+            <a href="www.zoominfo.com">ZoomInfo</a>
+          </h3>
+          <div class="years">2022-2023</div>
+          <div class="role">Software Engineer</div>
+          <div>
+            <ul>
+              <li>
+                Collaborated in an <strong>Agile</strong> development
+                environment, working alongside cross-functional teams to deliver
+                high-quality software solutions.
+              </li>
+              <li>
+                Contributed to the development of a high scale web application
+                with millions of users, utilizing.
+                <strong
+                  >Angular, Nest.js, Node.js, MongoDB, TypeScript, Jenkins for
+                  CI/CD, and Jest</strong
+                >.
+              </li>
+              <li>
+                Employed <strong>Git</strong> for version control, ensuring
+                efficient collaboration and code management.
+              </li>
+              <li>
+                Leveraged <strong>Datadog and Amplitude</strong> events for
+                monitoring and analyzing application performance and user
+                behavior.
+              </li>
+              <li>
+                Worked closely with the product manager to understand and
+                translate requirements into actionable development tasks.
+              </li>
+              <li>
+                Utilized Figma to collaborate on UI/UX designs and ensure
+                seamless user experiences.
+              </li>
+            </ul>
+          </div>
+        </li>
+        <hr />
+        <li class="company">
+          <h3 class="company-name">
+            <a href="www.hilan.co.il">Hilan</a>
+          </h3>
+          <div class="years">2009-2021</div>
+          <div class="role">Payroll Systems Implementation Specialist</div>
+          <div>
+            <ul>
+              <li>
+                Implemented and assimilated payroll systems for clients,
+                delivering comprehensive software solutions as a
+                Software-as-a-Service (SaaS) provider.
+              </li>
+              <li>
+                Translated client needs and requirements into technical
+                documents, facilitating software development and conducting
+                quality assurance tests.
+              </li>
+              <li>
+                Defined and troubleshooted internal and external file
+                interfaces.
+              </li>
+              <li>
+                Built reports and conducted data analysis to support
+                decision-making processes.
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="!showContent">
+      <div>
+        <div class="grid-container">
+          <app-personal-project
+            *ngFor="let project of projects; let projectIndex = index"
+            [description]="project.description"
+            [stack]="project.stack"
+            [demo]="project.demo"
+            [selected]="projectIndex === selectedProjectIndex"
+            (click)="showDescription(projectIndex)"
+          ></app-personal-project>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

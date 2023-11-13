@@ -32,8 +32,9 @@ nav {
     align-items: center;
     cursor: pointer;
 
-    img {
-      height: 40px;
+    .homepage {
+      font-size: 24px;
+      color: var(--primary-color);
     }
 
     .title-container {

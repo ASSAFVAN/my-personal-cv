@@ -1,0 +1,14 @@
+<div class="project-container">
+  <div>
+    <p>
+      <span><strong>Description: </strong></span>{{ description }}
+    </p>
+    <p>
+      <span><strong>Tech Stack: </strong></span>{{ stack }}
+    </p>
+    <p *ngIf="demo">
+      <span><strong>Demo: </strong></span
+      ><a href="{{ demo }}" target="_blank" class="demo">{{ demo }}</a>
+    </p>
+  </div>
+</div>
