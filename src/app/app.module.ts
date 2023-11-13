@@ -8,9 +8,10 @@ import { FormalEducationModule } from './pages/formal-education/formal-education
 import { HomepageModule } from './pages/homepage/homepage.module';
 import { PracticalExperienceModule } from './pages/practical-experience/practical-experience.module';
 import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
