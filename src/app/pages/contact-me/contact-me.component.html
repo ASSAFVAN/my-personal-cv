@@ -1,1 +1,119 @@
-<p>contact-me works!</p>
+<section>
+  <h1>Contact Me</h1>
+  <div class="contact-container">
+    <div class="contact-form">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <!-- first name -->
+        <p>
+          <label class="label" for="firstName"></label>
+          <input
+            class="input"
+            type="text"
+            placeholder="First Name"
+            formControlName="firstName"
+            [ngClass]="{
+              invalid: isFieldInvalid('firstName')
+            }"
+          />
+        </p>
+        <ng-container *ngIf="isFieldInvalid('firstName')">
+          <p class="red">This field id required</p>
+        </ng-container>
+
+        <!-- last name -->
+        <p class="field">
+          <label class="label" for="lastName"></label>
+          <input
+            class="input"
+            type="text"
+            placeholder="Last Name"
+            formControlName="lastName"
+            [ngClass]="{
+              invalid: isFieldInvalid('lastName')
+            }"
+          />
+        </p>
+        <ng-container *ngIf="isFieldInvalid('lastName')">
+          <p class="red">This field id required</p>
+        </ng-container>
+
+        <!-- email -->
+        <p class="field">
+          <label class="label" for="email"></label>
+          <input
+            class="input"
+            type="email"
+            placeholder="Email"
+            formControlName="email"
+            [ngClass]="{
+              invalid: isFieldInvalid('email')
+            }"
+          />
+        </p>
+        <ng-container *ngIf="isFieldInvalid('email')">
+          <p class="red">This field id required</p>
+        </ng-container>
+
+        <!-- phone number -->
+        <p class="field">
+          <label class="label" for="phone"></label>
+          <input
+            class="input"
+            type="tel"
+            placeholder="Phone Number"
+            formControlName="phone"
+            [ngClass]="{
+              invalid: isFieldInvalid('phone')
+            }"
+          />
+        </p>
+        <ng-container *ngIf="isFieldInvalid('phone')">
+          <p class="red">This field id required</p>
+        </ng-container>
+
+        <button type="submit" class="field">
+          Submit <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="contact-details">
+      <div class="contact-list">
+        <i class="fa-solid fa-location-dot"></i><span>Israel</span>
+      </div>
+      <div class="contact-list">
+        <i class="fa-solid fa-phone"></i><span>+972 546393591</span>
+      </div>
+      <div class="contact-list">
+        <i class="fa-solid fa-envelope"></i><span>vanunuassaf@gmail.com</span>
+      </div>
+      <hr />
+      <div class="socials">
+        <a href="https://github.com/ASSAFVAN" target="_blank" class="social">
+          <div><i class="fa-brands fa-github"></i></div>
+        </a>
+        <a
+          href="https://www.facebook.com/assaf.vanunu?locale=he_IL"
+          target="_blank"
+          class="social"
+        >
+          <div><i class="fa-brands fa-facebook"></i></div>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/assaf-vanunu-a38bb91a1/"
+          target="_blank"
+          class="social"
+        >
+          <div><i class="fa-brands fa-linkedin"></i></div>
+        </a>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <div
+    *ngIf="submitService.isFormSubmitted$ | async as isFormSubmitted"
+    class="submitted"
+  >
+    <p>Form has been submitted successfully!</p>
+  </div>
+</section>

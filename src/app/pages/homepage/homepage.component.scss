@@ -30,6 +30,10 @@ section {
     color: white;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover {
+      background-color: var(--hovering-color);
+    }
   }
 }
 
