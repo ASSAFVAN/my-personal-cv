@@ -1,0 +1,31 @@
+section {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--secondary-color);
+
+  .education-container {
+    max-width: 840px;
+
+    li {
+      list-style: none;
+      line-height: 22px;
+
+      .institue {
+        margin-bottom: 5px;
+      }
+      .years {
+        font-weight: 500;
+      }
+      .role {
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+    }
+    hr {
+      margin: 15px 0;
+    }
+  }
+}
