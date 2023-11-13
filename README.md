@@ -1,27 +1,21 @@
-# MyPersonalCv
+## Application Overview
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+I've created a personal cv application using Angular framework and pure SCSS.
+A demo can be seen here: https://my-personal-cv-beta.vercel.app/contact-me
 
-## Development server
+**I've created 4 pages:**
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. **Homepage**: A brief review about me with option to download my cv as DOCX file.
 
-## Code scaffolding
+2. **Formal Education**: A review about my formal education along the years.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3. **Practical Experience**: Option to toggle between my work experience and my personal projects in Github with
+   links to demos (where there's a demo avilable).
 
-## Build
+4. **Contact Me**: A form to submit your personal details. The form was created using reactive forms including validation on all fields. When submitting a valid form, a note is present to the user using a service. There are also my personal details to connect with me.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**I've created additional components:**
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. **Header**: Header includes routing to all pages.
+2. **Footer**: Very basic footer.
+3. **Personal-Project**: In my practical experience page, I show my personal projects. Since they're repeating, I've created a seperate component for each component and display all the projects using ngFor direcive.
