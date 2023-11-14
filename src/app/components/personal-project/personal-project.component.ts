@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class PersonalProjectComponent {
   @Input() description: string = '';
-  @Input() selected: boolean = false;
   @Input() stack: string[] = [];
   @Input() demo: string = '';
 }

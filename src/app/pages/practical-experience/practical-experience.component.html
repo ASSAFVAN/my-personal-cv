@@ -92,12 +92,10 @@
       <div>
         <div class="grid-container">
           <app-personal-project
-            *ngFor="let project of projects; let projectIndex = index"
+            *ngFor="let project of projects"
             [description]="project.description"
             [stack]="project.stack"
             [demo]="project.demo"
-            [selected]="projectIndex === selectedProjectIndex"
-            (click)="showDescription(projectIndex)"
           ></app-personal-project>
         </div>
       </div>

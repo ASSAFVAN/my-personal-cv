@@ -8,14 +8,9 @@ import { projects } from './utils';
 })
 export class PracticalExperienceComponent {
   showContent = true;
-  selectedProjectIndex: number | null = 0;
   projects = projects;
 
   toggleContent() {
     this.showContent = !this.showContent;
-  }
-
-  showDescription(index: number): void {
-    this.selectedProjectIndex = index;
   }
 }
