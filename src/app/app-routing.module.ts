@@ -10,7 +10,6 @@ const routes: Routes = [
   { path: 'formal-education', component: FormalEducationComponent },
   { path: 'practical-experience', component: PracticalExperienceComponent },
   { path: 'contact-me', component: ContactMeComponent },
-  // { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({
